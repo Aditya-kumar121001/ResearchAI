@@ -9,15 +9,23 @@
     "scripting",
     "storage",
     "tabs",
-    "clipboardRead"
+    "clipboardRead",
+    "https://*/",
+  "http://*/"
   ],
     "background": {
       "service_worker": "background.js"
     },
+    "host_permissions": [
+      "file:///*",
+      "*://*/*.pdf"
+    ],
     "content_scripts": [
       {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
+        "css": ["content.css"],
+        "js": ["content.js"],
+        "matches": ["*://*/*.pdf"],
+        "all_frames": true
       }
     ],
     "action": {

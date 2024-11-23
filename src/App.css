@@ -40,3 +40,43 @@
 .read-the-docs {
   color: #888;
 }
+
+#context-menu {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: opacity 0.2s;
+}
+
+#context-menu.hidden {
+  display: none !important;
+}
+
+
+#context-menu button {
+  border: none;
+  background: #007bff;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#context-menu button:hover {
+  background-color: #0056b3;
+}
+
+#context-menu button#highlight {
+  background-color: #ffc107;
+  color: black;
+}
+
+#context-menu button#highlight:hover {
+  background-color: #e0a800;
+}
